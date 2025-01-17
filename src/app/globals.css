@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    color: white;
+    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
+        rgb(var(--background-start-rgb));
+}
+
+/* header {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(238, 237, 237, 0.1797556719022687) 50%
+    );
+} */
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+@layer base {
+    @font-face {
+        font-family: "Lato";
+        src: url("/fonts/Lato-Regular.ttf") format(".ttf");
+    }
+    @font-face {
+        font-family: "Moul";
+        src: url("/fonts/Moul-Regular.ttf") format(".ttf");
+    }
+    @font-face {
+        font-family: "Anybody";
+        src: url("/fonts/Anybody-VariableFont_wdth\,wght.ttf") format(".ttf");
+    }
+    @font-face {
+        font-family: "BlackOps";
+        src: url("/fonts/BlackOpsOne-Regular.ttf") format(".ttf");
+    }
+    @font-face {
+        font-family: "Inter";
+        src: url("/fonts/Inter-VariableFont_opsz\,wght.ttf") format(".ttf");
+    }
+    @font-face {
+        font-family: "SulpherPoint";
+        src: url("/fonts/SulphurPoint-Regular.ttf") format(".ttf");
+    }
+    @font-face {
+        font-family: "Monotone";
+        src: url("/fonts/Monoton-Regular.ttf") format(".ttf");
+    }
+}
+
+input,
+textarea {
+    @apply border-none rounded-lg w-full py-2 px-4 caret-black ring-0;
+}
+
+label {
+    @apply text-sm font-semibold;
+}
